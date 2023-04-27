@@ -1,6 +1,6 @@
 # DasuGo
 
-[![Go Report Card](https://goreportcard.com/report/github.com/JordanRad/dasugo)](https://goreportcard.com/report/github.com/JordanRad/dasugo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/JordanRad/dasugo)](https://goreportcard.com/report/github.com/JordanRad/dasugo)
 
 DasuGo is a Go utility library inspired by JavaScript's functional programming methods, such as map, reduce, filter, some, and intersect. It is written in Go and makes use of Go generics.
 
