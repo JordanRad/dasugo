@@ -1,0 +1,26 @@
+name: DasuGo CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+        
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+
+    - name: Run tests
+      run: go test ./... -v -shuffle=on -race --cover
+
+    - name: Build
+      working-directory: ./cmd/fit-smart
+      run: go build -v -race
