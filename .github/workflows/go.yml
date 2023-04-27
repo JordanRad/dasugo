@@ -22,5 +22,4 @@ jobs:
       run: go test ./... -v -shuffle=on -race --cover
 
     - name: Build
-      working-directory: ./cmd/fit-smart
       run: go build -v -race
