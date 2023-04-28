@@ -18,5 +18,14 @@ var _ = Describe("Dasugo", func() {
 
 			Expect(output).To(Equal(expected))
 		})
+		It("should return an empty array if no entry meets the filtering condition", func() {
+			input := []int{1, 2, 3, 40, 50}
+
+			output := dasugo.Filter(input, func(item int) bool {
+				return item >= 1090
+			})
+
+			Expect(output).To(BeEmpty())
+		})
 	})
 })
